@@ -1,0 +1,9 @@
+{
+  "sitecore": {
+    "instancePath": "C:\\inetpub\\wwwroot\\sc900.local",
+    "apiKey": "{D2999BDD-B2AD-4C13-870E-352B8546AA69}",
+    "deploySecret": "l94g2b1f9ntjqqca6dvo3pjol42vzp691sznp5lvcm",
+    "deployUrl": "http://ionic4.dev.local/sitecore/api/jss/import",
+    "layoutServiceHost": "http://ionic4.dev.local"
+  }
+}

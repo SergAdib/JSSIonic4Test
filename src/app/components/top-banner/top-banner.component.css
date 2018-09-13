@@ -1,0 +1,29 @@
+.top-banner {
+    height: 200px;
+    width: 100%;
+    border: 1px solid green;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.top-banner img {
+    display: inline-block;
+    min-height: 100%;
+    height: auto;
+    min-width: 100%;
+    width:auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.top-banner .title {
+    display: inline-block;
+    width: auto;
+    margin: 15px auto;
+    font-size: 24px;
+}

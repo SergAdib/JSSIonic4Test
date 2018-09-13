@@ -1,0 +1,17 @@
+.footer {
+    height: 150px;
+    text-align: center;
+    background: lightblue;
+    width: 100%;
+}
+
+.footer .title {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.footer .email, .footer .email a {
+    font-size: 16px;
+    color: darkgreen;
+}

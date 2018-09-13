@@ -1,0 +1,51 @@
+.badge-icon {
+    display: block;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 60px;
+    border: 1px dashed lightpink;
+    overflow: hidden;
+}
+
+.badge-icon .title {
+    display: block;
+    text-align: center;
+    height: auto;
+    padding: 5px auto;
+    font-size: 24px;
+}
+
+.badge-icon .icon-holder {
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border: 1px solid silver;
+    border-radius: 20px;
+}
+
+.badge-icon .icon-holder .icon {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    min-width: 40px;
+    height: auto;
+    min-height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.badge-icon .text {
+    display: block;
+    text-align: left;
+    height: auto;
+    padding: 5px auto;
+    font-size: 18px;
+}
