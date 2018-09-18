@@ -8,7 +8,17 @@ declare module "*.json" {
   export default value;
 }
 
-// interface Window {
-//   document: any;
-// }
-//declare var window: Window;
+
+
+declare var global : Global;
+type Global = {
+  document: any;
+  window: any;
+  navigator: any;
+}
+
+interface global {
+  document: any;
+  window: any;
+  navigator: any;
+}

@@ -1,11 +1,6 @@
 import { enableProdMode, Injectable, NgZone } from "@angular/core";
-//import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import { AppModule } from "./app/app.module";
 import { environment } from "./environments/environment";
-
-//import { Injectable,NgZone } from ‘@angular/core’;
-//import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/observable/fromEvent";
@@ -13,14 +8,6 @@ import "rxjs/add/operator/map";
 
 //import {platformBrowser} from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-//import { fakeGlobals } from "./app/fakeWindow";
-
-// if (!window) {
-//   (<any>window) = <any>window ? window : fakeGlobals.win;
-// }
-// if (!document) {
-//   (<any>document) = <any>document ? document : fakeGlobals.doc;
-// }
 
 function _window(): any {
   // return the global native browser window object
@@ -59,6 +46,7 @@ let onDeviceReady = () => {
     .bootstrapModule(AppModule)
     .catch(err => console.log(err));
 };
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -66,6 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
     .bootstrapModule(AppModule)
     .catch(err => console.log(err));
 });
-
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .catch(err => console.log(err));

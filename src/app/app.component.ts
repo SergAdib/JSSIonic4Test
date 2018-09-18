@@ -1,9 +1,10 @@
 import { Component, PLATFORM_ID } from '@angular/core';
+//import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-//import { fakeGlobals } from "./fakeWindow";
+
 import { isPlatformServer } from '@angular/common';
 
 @Component({
@@ -21,19 +22,23 @@ export class AppComponent {
 
   initializeApp() {
 
+    // if (!window || !(window instanceof Window)) {
+    //
+    //   console.log("PLATFORM ID is a SERVER");
+    //
+    // } else {
+    //   console.log("PLATFORM ID is NOT a SERVER");
+    // }
+
     if (isPlatformServer(PLATFORM_ID)) {
 
       console.log("PLATFORM ID is a SERVER");
-      //window = fakeGlobals.win;
-      window = new Window();
-    }
 
-    // if (isPlatformServer(PLATFORM_ID)) {
-    //   window = fakeGlobals.win;
-    //   console.log("PLATFORM ID is a SERVER");
-    // } else {
-    //   window = window;
-    // }
+    } else {
+
+      console.log("PLATFORM ID is NOT a SERVER");
+
+    }
 
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
