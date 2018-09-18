@@ -2221,11 +2221,12 @@ exports.AppComponentNgFactory = AppComponentNgFactory;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+//import { Component } from '@angular/core';
 var angular_1 = __webpack_require__(/*! @ionic/angular */ "@ionic/angular");
 var ngx_1 = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "@ionic-native/splash-screen/ngx");
 var ngx_2 = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "@ionic-native/status-bar/ngx");
-//import { fakeGlobals } from "./fakeWindow";
-//import { isPlatformServer } from '@angular/common';
+var common_1 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var AppComponent = /** @class */ (function () {
     function AppComponent(platform, splashScreen, statusBar) {
         this.platform = platform;
@@ -2234,29 +2235,21 @@ var AppComponent = /** @class */ (function () {
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
+        // if (!window || !(window instanceof Window)) {
+        //
+        //   console.log("PLATFORM ID is a SERVER");
+        //
+        // } else {
+        //   console.log("PLATFORM ID is NOT a SERVER");
+        // }
         var _this = this;
-        if (!window || !(window instanceof Window)) {
-            //window = new Window();
-            //var window = fakeGlobals.win;
+        if (common_1.isPlatformServer(core_1.PLATFORM_ID)) {
             console.log("PLATFORM ID is a SERVER");
-            //window = fakeGlobals.win;
         }
         else {
             console.log("PLATFORM ID is NOT a SERVER");
         }
-        // if (isPlatformServer(PLATFORM_ID)) {
-        //   console.log("PLATFORM ID is a SERVER");
-        //   //window = fakeGlobals.win;
-        //   window = new Window();
-        // }
-        // if (isPlatformServer(PLATFORM_ID)) {
-        //   window = fakeGlobals.win;
-        //   console.log("PLATFORM ID is a SERVER");
-        // } else {
-        //   window = window;
-        // }
         this.platform.ready().then(function () {
-            console.log('SERG CHECK PLATFORM');
             _this.statusBar.styleDefault();
             _this.splashScreen.hide();
         });
@@ -3101,7 +3094,6 @@ var JssContextServerSideService = /** @class */ (function (_super) {
         _this.transferState = transferState;
         _this.layoutService = layoutService;
         _this.serverToSsrState = serverToSsrState;
-        console.log('JSS SERG CHECK');
         return _this;
     }
     JssContextServerSideService.prototype.changeRoute = function (route, language) {
@@ -4206,7 +4198,7 @@ exports.LAZY_MODULE_MAP = { "./home/home.module#HomePageModule": __lazy_0__.Home
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\S9JSS_projs\ionic4\src\main.server.ts */"./src/main.server.ts");
+module.exports = __webpack_require__(/*! d:\S9JSS_projs\ionic4\src\main.server.ts */"./src/main.server.ts");
 
 
 /***/ }),
