@@ -44,7 +44,7 @@ import { GraphQLModule } from './jss-graphql.module';
   imports: [
     //SSRHelper,
     // withServerTransition is needed to enable universal rendering
-    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    BrowserModule.withServerTransition({ appId: 'ionic4' }),
     BrowserTransferStateModule,
     HttpClientModule,
     GraphQLModule,

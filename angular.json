@@ -2,11 +2,14 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "defaultProject": "ionic4",
   "projects": {
     "ionic4": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -94,6 +97,30 @@
             ]
           }
         },
+        "ionic-cordova-build": {
+          "builder": "@ionic/ng-toolkit:cordova-build",
+          "options": {
+            "browserTarget": "ionic4:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ionic4:build:production"
+            }
+          }
+        },
+        "ionic-cordova-serve": {
+          "builder": "@ionic/ng-toolkit:cordova-serve",
+          "options": {
+            "cordovaBuildTarget": "ionic4:ionic-cordova-build",
+            "devServerTarget": "ionic4:serve"
+          },
+          "configurations": {
+            "production": {
+              "cordovaBuildTarget": "ionic4:ionic-cordova-build:production",
+              "devServerTarget": "ionic4:serve:production"
+            }
+          }
+        },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
@@ -130,7 +157,9 @@
       }
     }
   },
-  "defaultProject": "ionic4",
+  "cli": {
+    "defaultCollection": "@ionic/schematics-angular"
+  },
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
