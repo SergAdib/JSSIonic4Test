@@ -1,8 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
-  "defaultProject": "ionic4",
+  "newProjectRoot": "./../",
   "projects": {
     "ionic4": {
       "root": "",
@@ -127,6 +126,22 @@
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }
@@ -157,6 +172,7 @@
       }
     }
   },
+  "defaultProject": "ionic4",
   "cli": {
     "defaultCollection": "@ionic/schematics-angular"
   },

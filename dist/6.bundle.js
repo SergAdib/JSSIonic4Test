@@ -1,90 +1,21 @@
 exports.ids = [6];
 exports.modules = {
 
-/***/ 311:
+/***/ 506:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createThemedClasses; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return createColorClasses; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return openURL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return hostContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getClassMap; });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-function hostContext(e, t) { return !!t.closest(e); }
-function createColorClasses(e) { var _a; return e ? (_a = { "ion-color": !0 }, _a["ion-color-" + e] = !0, _a) : null; }
-function createThemedClasses(e, t) { var _a; return _a = {}, _a[t] = !0, _a[t + "-" + e] = !!e, _a; }
-function getClassList(e) { return e ? (Array.isArray(e) ? e : e.split(" ")).filter(function (e) { return null != e; }).map(function (e) { return e.trim(); }).filter(function (e) { return "" !== e; }) : []; }
-function getClassMap(e) { var t = {}; return getClassList(e).forEach(function (e) { return t[e] = !0; }), t; }
-function openURL(e, t, r, s) {
-    return __awaiter(this, void 0, void 0, function () { var o; return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                if (!(t && "#" !== t[0] && -1 === t.indexOf("://"))) return [3 /*break*/, 2];
-                o = e.document.querySelector("ion-router");
-                if (!o) return [3 /*break*/, 2];
-                r && r.preventDefault();
-                return [4 /*yield*/, o.componentOnReady()];
-            case 1: return [2 /*return*/, (_a.sent(), o.push(t, s))];
-            case 2: return [2 /*return*/, Promise.resolve()];
-        }
-    }); });
-}
-
-
-
-/***/ }),
-
-/***/ 336:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonAvatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonBadge", function() { return Badge; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonThumbnail", function() { return Thumbnail; });
-/* harmony import */ var _ionic_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(300);
-/* harmony import */ var _chunk_f7b6af08_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(311);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyPolyfill", function() { return applyPolyfill; });
+function applyPolyfill(window, document) {
 /*!
- * (C) Ionic http://ionicframework.com - MIT License
- * Built with http://stenciljs.com
- */
-var Avatar=function(){function e(){}return e.prototype.render=function(){return Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot",null)},Object.defineProperty(e,"is",{get:function(){return"ion-avatar"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"shadow"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return":host{border-radius:var(--border-radius);display:block;--border-radius:50%;width:48px;height:48px}::slotted(img),::slotted(ion-img){border-radius:var(--border-radius);width:100%;height:100%;-o-object-fit:cover;object-fit:cover;overflow:hidden}"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"styleMode",{get:function(){return"ios"},enumerable:!0,configurable:!0}),e}(),Badge=function(){function e(){}return e.prototype.hostData=function(){return{class:Object(_chunk_f7b6af08_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this.color)}},e.prototype.render=function(){return Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot",null)},Object.defineProperty(e,"is",{get:function(){return"ion-badge"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"shadow"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"properties",{get:function(){return{color:{type:String,attr:"color"},mode:{type:String,attr:"mode"}}},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return":host{--background:var(--ion-color-primary, #3880ff);--color:var(--ion-color-primary-contrast, #fff);--padding-top:3px;--padding-end:8px;--padding-bottom:3px;--padding-start:8px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;padding:var(--padding-top) var(--padding-end) var(--padding-bottom) var(--padding-start);display:inline-block;min-width:10px;background:var(--background);color:var(--color);font-family:var(--ion-font-family,inherit);font-size:13px;font-weight:700;line-height:1;text-align:center;white-space:nowrap;contain:content;vertical-align:baseline;border-radius:10px}:host(.ion-color){background:var(--ion-color-base);color:var(--ion-color-contrast)}:host(:empty){display:none}"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"styleMode",{get:function(){return"ios"},enumerable:!0,configurable:!0}),e}(),Thumbnail=function(){function e(){}return e.prototype.render=function(){return Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot",null)},Object.defineProperty(e,"is",{get:function(){return"ion-thumbnail"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"shadow"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return":host{--size:48px;--border-radius:0;border-radius:var(--border-radius);display:block;width:var(--size);height:var(--size)}::slotted(img),::slotted(ion-img){border-radius:var(--border-radius);width:100%;height:100%;-o-object-fit:cover;object-fit:cover;overflow:hidden}"},enumerable:!0,configurable:!0}),e}();
+url-polyfill, 1.0.14
+https://github.com/lifaon74/url-polyfill
+MIT Licensed
+*/
+(function(e){var t=function(){try{return!!Symbol.iterator}catch(e){return false}};var n=t();var r=function(e){var t={next:function(){var t=e.shift();return{done:t===void 0,value:t}}};if(n){t[Symbol.iterator]=function(){return t}}return t};var i=function(e){return encodeURIComponent(e).replace(/%20/g,"+")};var o=function(e){return decodeURIComponent(e).replace(/\+/g," ")};var a=function(){var t=function(e){Object.defineProperty(this,"_entries",{value:{}});if(typeof e==="string"){if(e!==""){e=e.replace(/^\?/,"");var n=e.split("&");var r;for(var i=0;i<n.length;i++){r=n[i].split("=");this.append(o(r[0]),r.length>1?o(r[1]):"")}}}else if(e instanceof t){var a=this;e.forEach(function(e,t){a.append(e,t)})}};var a=t.prototype;a.append=function(e,t){if(e in this._entries){this._entries[e].push(t.toString())}else{this._entries[e]=[t.toString()]}};a.delete=function(e){delete this._entries[e]};a.get=function(e){return e in this._entries?this._entries[e][0]:null};a.getAll=function(e){return e in this._entries?this._entries[e].slice(0):[]};a.has=function(e){return e in this._entries};a.set=function(e,t){this._entries[e]=[t.toString()]};a.forEach=function(e,t){var n;for(var r in this._entries){if(this._entries.hasOwnProperty(r)){n=this._entries[r];for(var i=0;i<n.length;i++){e.call(t,n[i],r,this)}}}};a.keys=function(){var e=[];this.forEach(function(t,n){e.push(n)});return r(e)};a.values=function(){var e=[];this.forEach(function(t){e.push(t)});return r(e)};a.entries=function(){var e=[];this.forEach(function(t,n){e.push([n,t])});return r(e)};if(n){a[Symbol.iterator]=a.entries}a.toString=function(){var e=[];this.forEach(function(t,n){e.push(i(n)+"="+i(t))});return e.join("&")};e.URLSearchParams=t};if(!("URLSearchParams"in e)||new URLSearchParams("?a=1").toString()!=="a=1"){a()}})(typeof global!=="undefined"?global:typeof window!=="undefined"?window:typeof self!=="undefined"?self:this);(function(e){var t=function(){try{var e=new URL("b","http://a");e.pathname="c%20d";return e.href==="http://a/c%20d"&&e.searchParams}catch(e){return false}};var n=function(){var t=e.URL;var n=function(e,t){if(typeof e!=="string")e=String(e);var n=document.implementation.createHTMLDocument("");window.doc=n;if(t){var r=n.createElement("base");r.href=t;n.head.appendChild(r)}var i=n.createElement("a");i.href=e;n.body.appendChild(i);i.href=i.href;if(i.protocol===":"||!/:/.test(i.href)){throw new TypeError("Invalid URL")}Object.defineProperty(this,"_anchorElement",{value:i})};var r=n.prototype;var i=function(e){Object.defineProperty(r,e,{get:function(){return this._anchorElement[e]},set:function(t){this._anchorElement[e]=t},enumerable:true})};["hash","host","hostname","port","protocol","search"].forEach(function(e){i(e)});Object.defineProperties(r,{toString:{get:function(){var e=this;return function(){return e.href}}},href:{get:function(){return this._anchorElement.href.replace(/\?$/,"")},set:function(e){this._anchorElement.href=e},enumerable:true},pathname:{get:function(){return this._anchorElement.pathname.replace(/(^\/?)/,"/")},set:function(e){this._anchorElement.pathname=e},enumerable:true},origin:{get:function(){var e={"http:":80,"https:":443,"ftp:":21}[this._anchorElement.protocol];var t=this._anchorElement.port!=e&&this._anchorElement.port!=="";return this._anchorElement.protocol+"//"+this._anchorElement.hostname+(t?":"+this._anchorElement.port:"")},enumerable:true},password:{get:function(){return""},set:function(e){},enumerable:true},username:{get:function(){return""},set:function(e){},enumerable:true},searchParams:{get:function(){var e=new URLSearchParams(this.search);var t=this;["append","delete","set"].forEach(function(n){var r=e[n];e[n]=function(){r.apply(e,arguments);t.search=e.toString()}});return e},enumerable:true}});n.createObjectURL=function(e){return t.createObjectURL.apply(t,arguments)};n.revokeObjectURL=function(e){return t.revokeObjectURL.apply(t,arguments)};e.URL=n};if(!t()){n()}if(e.location!==void 0&&!("origin"in e.location)){var r=function(){return e.location.protocol+"//"+e.location.hostname+(e.location.port?":"+e.location.port:"")};try{Object.defineProperty(e.location,"origin",{get:r,enumerable:true})}catch(t){setInterval(function(){e.location.origin=r()},100)}}})(typeof global!=="undefined"?global:typeof window!=="undefined"?window:typeof self!=="undefined"?self:this);
+
+}
 
 /***/ })
 

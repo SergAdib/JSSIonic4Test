@@ -1,7 +1,7 @@
 exports.ids = [122];
 exports.modules = {
 
-/***/ 408:
+/***/ 596:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonRoute", function() { return Route; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonRouteRedirect", function() { return RouteRedirect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonRouter", function() { return Router; });
-/* harmony import */ var _chunk_42163827_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(319);
+/* harmony import */ var _chunk_42163827_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(292);
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
  * Built with http://stenciljs.com
