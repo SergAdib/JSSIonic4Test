@@ -1,4 +1,6 @@
-<app-navigation></app-navigation>
+<app-nav>
+<ion-nav></ion-nav>
+</app-nav>
 <div class="container">
   <sc-placeholder *ngIf="state === LayoutState.Layout" name="jss-main" [rendering]="route"></sc-placeholder>
   <app-not-found *ngIf="state === LayoutState.NotFound"></app-not-found>

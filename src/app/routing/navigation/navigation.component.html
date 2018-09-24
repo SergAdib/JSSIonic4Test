@@ -1,3 +1,32 @@
+<ion-menu>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item>
+        <a routerLink="/" class="text-dark" class="logo"></a>
+      </button>
+      <button ion-item>
+        <a routerLink="/pageFirst" class="p-2 text-dark">
+          {{ 'First Page' | translate }}
+        </a>
+      </button>
+      <button ion-item>
+        <a routerLink="/pageSecond" class="p-2 text-dark">
+          {{ '2nd Page' | translate }}
+        </a>
+      </button>
+      <button ion-item>
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
   <h5 class="my-0 mr-md-auto font-weight-normal">
     <a routerLink="/" class="text-dark" class="logo"></a>

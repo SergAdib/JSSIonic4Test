@@ -1,14 +1,8 @@
 // import { NgModule } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 // import { RouterModule, RouteReuseStrategy, Routes } from '@angular/router';
-
-import { IonicModule } from '@ionic/angular'; //IonicRouteStrategy
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
 // import { AppComponent } from './app.component';
 // import { AppRoutingModule } from './app-routing.module';
-
 // @NgModule({
 //   declarations: [AppComponent],
 //   entryComponents: [],
@@ -22,7 +16,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 // })
 // export class AppModule {}
 
-
+import { IonicModule } from '@ionic/angular'; //IonicRouteStrategy
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { BrowserModule, BrowserTransferStateModule, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
